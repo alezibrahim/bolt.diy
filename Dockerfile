@@ -79,7 +79,7 @@ HEALTHCHECK --interval=10s --timeout=3s --start-period=5s --retries=5 \
   CMD curl -fsS http://localhost:5173/ || exit 1
 
 # BYPASS WRANGLER: Use the dev server which includes the remix compiler
-CMD ["pnpm", "run", "dev", "--host", "0.0.0.0"]
+CMD ["pnpm", "run", "start"]
 
 
 # ---- development stage ----
