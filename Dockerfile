@@ -27,7 +27,7 @@ COPY . .
 RUN pnpm install --offline --frozen-lockfile
 
 # Build the Remix app (SSR + client)
-RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm run build
+RUN NODE_OPTIONS=--max-old-space-size=8192 pnpm run build
 
 # ---- production dependencies stage ----
 FROM build AS prod-deps
